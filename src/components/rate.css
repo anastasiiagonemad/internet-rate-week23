@@ -1,0 +1,72 @@
+.internet-rate {
+    margin: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    position: relative;
+}
+
+img {
+    position: absolute;
+    left: 90%;
+    bottom: 90%;
+    rotate: 20deg;
+    width: 65px;
+}
+
+.internet-rate:hover {
+    box-shadow: 5px 5px 25px rgba(15, 161, 42, 0.7);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+}
+
+.internet-rate__main {
+    border-radius: 8px 8px 0 0;
+    padding: 2rem;
+    color: white;
+}
+
+.internet-rate__title {
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.internet-rate__price-rub {
+    font-size: 0.6em;
+    text-align: center;
+}
+.internet-rate__price-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.internet-rate__price-num {
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.internet-rate__price-month {
+    font-size: 0.7em;
+    margin-top: 30px;
+}
+
+.internet-rate__speed,
+.internet-rate__desk {
+    text-align: center;
+}
+
+.internet-rate__speed {
+    background-color: WhiteSmoke;
+    margin: 0 auto;
+    padding: 5px;
+    font-weight: 700;
+}
+
+.internet-rate__desk {
+    background-color: rgb(229, 229, 229);
+    font-size: 0.875em;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 0 0 8px 8px;
+}
