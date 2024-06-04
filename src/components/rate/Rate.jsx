@@ -1,10 +1,8 @@
-import React from 'react';
-import rate from './rate.css';
-import specialImage from '../assets/bestseller.png';
+import React, { useState } from 'react';
+import '../rate/Rate.css';
+import bestseller from '../assets/bestseller.png';
 
-function Rate(props) {
-  const { rate, price, speed } = props;
-
+function Rate({ rate, price, speed }) {
   const cardBackgroundColor = (price) => {
     if (price === 300) {
       return 'LightBlue';
@@ -19,10 +17,22 @@ function Rate(props) {
 
   const backgroundColor = cardBackgroundColor(price);
 
+  const [isSelected, setIsSelected] = useState(false);
+  const handleClick = () => {
+    setIsSelected(!isSelected);
+  };
+
   return (
-    <div className="internet-rate">
-      {price === 550 && <img src={specialImage} alt="Special Offer" />}
+    <div
+      className={`internet-rate ${isSelected ? 'selected' : ''}`}
+      onClick={handleClick}
+    >
+      {price === 550 && <img src={bestseller} alt="Special Offer" />}
+
       <div style={{ backgroundColor }} className="internet-rate__main">
+        <div className="internet-rate__choosen">
+          {isSelected && <span className="choosen">ТАРИФ ВЫБРАН ✅</span>}
+        </div>
         <div className="internet-rate__title">
           <h4>{rate}</h4>
         </div>
@@ -44,4 +54,4 @@ function Rate(props) {
   );
 }
 
-export { Rate };
+export default Rate;

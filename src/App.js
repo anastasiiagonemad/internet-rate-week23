@@ -1,5 +1,5 @@
-import { Header } from './components/Header';
-import { Rate } from './components/Rate';
+import Header from './components/header/Header';
+import Rate from './components/rate/Rate';
 
 const rates = [
   { title: 'Тариф Light', price: 300, speed: 10 },

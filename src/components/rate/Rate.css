@@ -70,3 +70,9 @@ img {
     padding: 5px;
     border-radius: 0 0 8px 8px;
 }
+
+.internet-rate__choosen {
+    text-align: center;
+    font-size: 0.8em;
+    height: 10px;
+}
