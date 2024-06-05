@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../rate/Rate.css';
 import bestseller from '../assets/bestseller.png';
 
-function Rate({ rate, price, speed }) {
+function Rate({ rate, price, speed, isSelected, onRateClick }) {
   const cardBackgroundColor = (price) => {
     if (price === 300) {
       return 'LightBlue';
@@ -17,9 +17,8 @@ function Rate({ rate, price, speed }) {
 
   const backgroundColor = cardBackgroundColor(price);
 
-  const [isSelected, setIsSelected] = useState(false);
   const handleClick = () => {
-    setIsSelected(!isSelected);
+    onRateClick(rate);
   };
 
   return (

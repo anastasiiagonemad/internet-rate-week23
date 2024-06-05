@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Header from './components/header/Header';
 import Rate from './components/rate/Rate';
 
@@ -8,6 +9,11 @@ const rates = [
   { title: 'Тариф PRO', price: 1000, speed: 200 },
 ];
 function App() {
+  const [selectedRate, setSelectedRate] = useState(null);
+  const handleRateClick = (rateTitle) => {
+    setSelectedRate(rateTitle);
+  };
+
   return (
     <div>
       <Header />
@@ -18,6 +24,8 @@ function App() {
             rate={rate.title}
             price={rate.price}
             speed={rate.speed}
+            isSelected={selectedRate === rate.title}
+            onRateClick={handleRateClick}
           />
         ))}
       </div>
